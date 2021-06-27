@@ -1,0 +1,125 @@
+#map {
+    height:100vh;
+    z-index:0;
+    position: relative;
+    cursor: pointer;
+}
+.filters {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+    top:0;
+    right:0;
+    width:5%;
+    padding:1em;
+    height:3em;
+    text-align: center;
+    background: rgba( 255, 255, 255, 0.50 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    cursor: pointer;
+}
+.open.filters {
+    width:40%;
+    justify-content: space-between;
+}
+.open.filters i {
+    padding-right:1em
+}
+.filters__container {
+    display: none;
+}
+.open .filters__container {
+    display: flex;
+    left:0
+}
+.filters__container ul {
+    display: flex;
+    left:0
+}
+.filters__container ul li{
+   padding:0 1em;
+   vertical-align: middle;
+}
+.filters__container ul li img{
+   width:15px;
+   height:15px;
+ }
+ .filters input {
+     display: none;
+ }
+ .active {
+     border-bottom: 1px solid black;
+ }
+.leaflet-popup-content {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em;   
+}
+.leaflet-marker-icon {
+    height: 1em;
+}
+.map__modal {
+    display: none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width:30%;
+    background: rgba( 255, 255, 255, 0.50 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding:1em;
+}
+.map__modal-text input, .map__modal-text select  {
+    border: none;
+    background-color: transparent;
+    padding:1em;
+    margin:.5em 0;
+    text-align: center;
+    font-size: 1em;
+   outline:none;
+    border-bottom: 1px solid orange;
+}
+.map__modal-text input[type=submit] {
+    margin-left:.5em;
+    border:1px solid orange;
+    background: rgb(251,88,63);
+    background: linear-gradient(90deg, rgba(251,88,63,1) 0%, rgba(252,192,70,1) 100%);
+}
+.map__modal-text input[type=submit]:hover {
+    background: white; 
+}
+.map__modal-text input::placeholder {
+    color: black;
+}
+.map__modal-close {
+    font-size: 2em;
+}
+.map__modal-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;   
+}
+.leaflet-marker-icon {
+    vertical-align: bottom;
+}
+@media (min-width:768px) {
+    .map__modal-text input, .map__modal-text select  {
+        font-size: 1.2em;
+    }
+    .map__modal-text {
+        flex-direction: row;   
+    }
+    .map__modal {
+        width:fit-content;
+    }
+}

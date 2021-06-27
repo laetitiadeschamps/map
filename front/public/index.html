@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte interactive</title>
+    <link rel="icon" href="assets/img/map.jpg" />
+    <!-- fonts & css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Api -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>      
+</head>
+<body>
+    <div id="map"></div>
+    <div class="filters"> 
+        <div class="filters__container"></div><i class="fas fa-filter"></i>
+   </div>
+    <div class="map__modal">
+        <form action="" method="POST">
+            <div class="map__modal-content">
+                <span class="map__modal-close">&times;</span>
+                <p class="map__modal-text">
+                    <input type="text" placeholder="Texte à afficher" id="displayText" >
+                    <select name="locationType" id="typeSelect">
+                        <option value="">Choisissez un type d'attraction</option>
+                    </select>
+                    <input type="submit" value="Valider" id="submitNewLocation" >
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/map.js"></script>
+<script src="assets/js/modal.js"></script>
+<script src="assets/js/location.js"></script>
+<script src="assets/js/filters.js"></script>
+</html>
