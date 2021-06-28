@@ -6,7 +6,7 @@ const filters = {
     },
     // We handle open / close mode of the filter block
     addFiltersEvents:function() {
-        document.querySelector('.filters i').addEventListener('click', filters.handleFiltersDisplay);
+        document.querySelector('.filters').addEventListener('click', filters.handleFiltersDisplay);
     },
     // Method for firing event whenever an input is checked / unchecked
     bindFiltersEvents:function(element) {

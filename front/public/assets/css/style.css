@@ -103,6 +103,7 @@
 }
 .map__modal-close {
     font-size: 2em;
+    cursor: pointer;
 }
 .map__modal-text {
     text-align: center;
