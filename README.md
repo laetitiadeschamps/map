@@ -13,3 +13,6 @@ Cette application est simple mais m'a permis de travailler le principe d'API RES
 
 Pour utiliser ce repo, lancer npm install et composer install
 Le back doit tourner sur le port 8080.
+
+## Démo
+https://user-images.githubusercontent.com/74212211/123756689-78adb280-d8bd-11eb-8ac0-8b276911dd21.gif
